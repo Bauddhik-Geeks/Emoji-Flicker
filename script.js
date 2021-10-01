@@ -1,3 +1,4 @@
+
 let count = 0;
 const emoji = document.getElementsByClassName("emoji");
 const changeemoji = (e) => {
