@@ -29,3 +29,14 @@ background: linear-gradient(to right, #FFB0D2 0%, #FD76FF 50%, #E876FF 100%);
 .active{
     display: block;
 }
+
+
+.glasses{
+    display: none;
+}
+.surprise{
+    display: none;
+}
+.active{
+    display: block;
+}
