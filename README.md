@@ -1,6 +1,15 @@
 # Emoji-Flicker
 
 ## ScreenShots
-<img src="https://github.com/Bauddhik-Geeks/Emoji-Flicker/blob/main/ScreenShots/sad.png">
-<hr>
-<img src="https://github.com/Bauddhik-Geeks/Emoji-Flicker/blob/main/ScreenShots/smile.png">
+![angel](ScreenShots/angel)
+![craving](ScreenShots/craving)
+![devil](ScreenShots/devil)
+![embarassed](ScreenShots/embarassed)
+![fan](ScreenShots/fan)
+![flirting](ScreenShots/flirting)
+![hero](ScreenShots/hero)
+![laughing](ScreenShots/laughing)
+![sad](ScreenShots/sad)
+![showingteeth](ScreenShots/showingteeth)
+![smile](ScreenShots/smile)
+![winking](ScreenShots/winking)
