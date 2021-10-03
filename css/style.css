@@ -20,14 +20,11 @@ background: linear-gradient(to right, #FFB0D2 0%, #FD76FF 50%, #E876FF 100%);
     cursor: pointer;
     user-select: none;
 }
-/* .closed{
+.closed{
     display: none;
 }
 .open{
     display: none;
-} */
-.emoji{
-     display: none;
 }
 .active{
     display: block;
