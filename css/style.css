@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  text-align: center;
 }
 
 body {
@@ -11,14 +12,22 @@ body {
   align-items: center;
   justify-content: center;
 
-  background: -moz-linear-gradient(left, #e6f79c 0%, #f1ff76 50%, #ffda76 100%);
+  background: -moz-linear-gradient(left, #feffb0 0%, #f1ff76 50%, #fffd76 100%);
   background: -webkit-linear-gradient(
     left,
-    #e6f79c 0%,
-    #f1ff76 50%,
-    #ffda76 100%
+    #fffab0 0%,
+    #fff676 50%,
+    #fdff76 100%
   );
-  background: linear-gradient(to right, #e6f79c 0%, #f1ff76 50%, #ffda76 100%);
+  background: linear-gradient(to right, #f8fcc8 0%, #f6ff76 50%, #fffd76 100%);
+  background-color: #d5c8b2;
+  opacity: 1;
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #dbccb1 27px
+    ),
+    repeating-linear-gradient(#9bf74555, #8945f7);
 }
 .emoji {
   font-size: 20rem;
