@@ -1,30 +1,114 @@
+let emojis = [
+  "😂",
+  "✌",
+  "😔",
+  "😝",
+  "😁",
+  "😱",
+  "👉",
+  "🙌",
+  "🍻",
+  "🔥",
+  "🌈",
+  "☀",
+  "🎈",
+  "🌹",
+  "💄",
+  "🎀",
+  "⚽",
+  "🎾",
+  "🏁",
+  "😡",
+  "👿",
+  "🐻",
+  "🐶",
+  "🐬",
+  "🐟",
+  "🍀",
+  "👀",
+  "🚗",
+  "🍎",
+  "💝",
+  "💙",
+  "👌",
+  "❤",
+  "😍",
+  "😉",
+  "😓",
+  "😳",
+  "💪",
+  "💩",
+  "🍸",
+  "🔑",
+  "💖",
+  "🌟",
+  "🎉",
+  "🌺",
+  "🎶",
+  "👠",
+  "🏈",
+  "⚾",
+  "🏆",
+  "👽",
+  "💀",
+  "🐵",
+  "🐮",
+  "🐩",
+  "🐎",
+  "💣",
+  "👃",
+  "👂",
+  "🍓",
+  "💘",
+  "💜",
+  "👊",
+  "💋",
+  "😘",
+  "😜",
+  "😵",
+  "🙏",
+  "👋",
+  "🚽",
+  "💃",
+  "💎",
+  "🚀",
+  "🌙",
+  "🎁",
+  "⛄",
+  "🌊",
+  "⛵",
+  "🏀",
+  "🎱",
+  "💰",
+  "👶",
+  "👸",
+  "🐰",
+  "🐷",
+  "🐍",
+  "🐫",
+  "🔫",
+  "👄",
+  "🚲",
+  "🍉",
+  "💛",
+  "💚",
+];
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+const emojiHTML = document.getElementsByClassName("container__emoji")[0];
+let emojiIndex = 0;
 
-//CODE 
-let count = 0;
-const emoji = document.getElementsByClassName("emoji");
-const changeemoji = (e) => {
-    if (e.target.classList[1]=="active") {
-        count++;
-        e.target.classList.toggle("active");
-        count = count % emoji.length;
-        emoji[count].classList.toggle("active");
-
-const closeface = document.querySelector('.closed');
-const openface = document.querySelector('.open');
-
-
-//event listener
-closeface.addEventListener('click', () => {
-    if(openface.classList.contains('open')){
-        openface.classList.add('active');
-        closeface.classList.remove('active');
-
-    }
+emojiHTML.addEventListener("click", () => {
+  emojiIndex = getRndInteger(0, 93);
+  if (emojis[emojiIndex] === undefined) {
+    emojiHTML.innerHTML = "😍";
+  } else {
+    emojiHTML.innerHTML = emojis[emojiIndex];
+  }
 });
 
-openface.addEventListener('click', () => {
-    if(closeface.classList.contains('closed')){
-        closeface.classList.add('active');
-        openface.classList.remove('active');
-    }
+const btn = document.getElementsByClassName("container__btn")[0];
+btn.addEventListener("click", () => {
+  navigator.clipboard.writeText(emojis[emojiIndex]);
 });
