@@ -1,20 +1,116 @@
-const closeface = document.querySelector('.closed');
-const openface = document.querySelector('.open');
+let emojis = [
+  "😂",
+  "✌",
+  "😔",
+  "😝",
+  "😁",
+  "😱",
+  "👉",
+  "🙌",
+  "🍻",
+  "🔥",
+  "🌈",
+  "☀",
+  "🎈",
+  "🌹",
+  "💄",
+  "🎀",
+  "⚽",
+  "🎾",
+  "🏁",
+  "😡",
+  "👿",
+  "🐻",
+  "🐶",
+  "🐬",
+  "🐟",
+  "🍀",
+  "👀",
+  "🚗",
+  "🍎",
+  "💝",
+  "💙",
+  "👌",
+  "❤",
+  "😍",
+  "😉",
+  "😓",
+  "😳",
+  "💪",
+  "💩",
+  "🍸",
+  "🔑",
+  "💖",
+  "🌟",
+  "🎉",
+  "🌺",
+  "🎶",
+  "👠",
+  "🏈",
+  "⚾",
+  "🏆",
+  "👽",
+  "💀",
+  "🐵",
+  "🐮",
+  "🐩",
+  "🐎",
+  "💣",
+  "👃",
+  "👂",
+  "🍓",
+  "💘",
+  "💜",
+  "👊",
+  "💋",
+  "😘",
+  "😜",
+  "😵",
+  "🙏",
+  "👋",
+  "🚽",
+  "💃",
+  "💎",
+  "🚀",
+  "🌙",
+  "🎁",
+  "⛄",
+  "🌊",
+  "⛵",
+  "🏀",
+  "🎱",
+  "💰",
+  "👶",
+  "👸",
+  "🐰",
+  "🐷",
+  "🐍",
+  "🐫",
+  "🔫",
+  "👄",
+  "🚲",
+  "🍉",
+  "💛",
+  "💚",
+];
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+const emojiHTML = document.getElementsByClassName("container__emoji")[0];
+let emojiIndex = 0;
 
-
-//event listener
-closeface.addEventListener('click', () => {
-    if(openface.classList.contains('open')){
-        openface.classList.add('active');
-        closeface.classList.remove('active');
-    }
+emojiHTML.addEventListener("click", () => {
+  emojiIndex = getRndInteger(0, 93);
+  if (emojis[emojiIndex] === undefined) {
+    emojiHTML.innerHTML = "😍";
+  } else {
+    emojiHTML.innerHTML = emojis[emojiIndex];
+  }
 });
 
-openface.addEventListener('click', () => {
-    if(closeface.classList.contains('closed')){
-        closeface.classList.add('active');
-        openface.classList.remove('active');
-    }
+const btn = document.getElementsByClassName("container__btn")[0];
+btn.addEventListener("click", () => {
+  navigator.clipboard.writeText(emojis[emojiIndex]);
 });
 
 const face1 = document.querySelector('.glasses');
